@@ -54,6 +54,7 @@ class ProductProvider extends Component {
         const index = Products.indexOf(this.getItem(id));
         const product = Products[index];
         product.inCart = 1;
+        product.count = 1;
         const price = product.price;
         product.total = price;
         this.setState(() => {
