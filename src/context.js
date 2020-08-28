@@ -68,22 +68,18 @@ class ProductProvider extends Component {
             }
         );
     };
-    openModaL = (id) => {
-        const product = this.getItem(id);
-        this.setstate({
-
-            modalOpen: true,
-            modalProduct: product
-
-        });
-
-    };
-    closeModal = () => {
-        this.setState(() => {
-            return { modalOpen: false };
-
-        });
-    };
+     openModal = (id) => {
+    const product = this.getItem(id);
+    this.setState({
+      modalOpen: true,
+      modalProduct: product,
+    });
+  };
+  closeModal = () => {
+    this.setState(() => {
+      return { modalOpen: false };
+    });
+  };
     increment = (id) => {
         let tempCart = [...this.state.cart];
         const selectedProduct = tempCart.find(item => {
